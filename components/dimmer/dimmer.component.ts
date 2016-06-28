@@ -30,7 +30,7 @@ export class Dimmer {
     @HostBinding('class.active')
     @Input() public isDimmed:boolean = false;
 
-    @Output() public isDimmedChange:EventEmitter<boolean> = new EventEmitter(false);
+    @Output() public isDimmedChange:EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     @HostListener('click')
     private click() {

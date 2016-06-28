@@ -22,7 +22,7 @@ export class Checkbox {
     @HostBinding('class.checked')
     private checked:boolean = false;
 
-    @Output() public checkChange:EventEmitter<boolean> = new EventEmitter(false);
+    @Output() public checkChange:EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     @Input() public isDisabled:boolean = false;
     @HostBinding('class.read-only')

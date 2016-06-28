@@ -22,8 +22,8 @@ export class DropdownService {
     public autoClose:string;
 
     // State Events
-    public onToggle:EventEmitter<boolean> = new EventEmitter(false);
-    public isOpenChange:EventEmitter<boolean> = new EventEmitter(false);
+    public onToggle:EventEmitter<boolean> = new EventEmitter<boolean>(false);
+    public isOpenChange:EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     // Important Elements
     public dropdownElement:ElementRef;

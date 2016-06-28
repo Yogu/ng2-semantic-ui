@@ -29,7 +29,7 @@ export class Rating {
         return Array(this._max);
     }
 
-    @Output() public valueChange:EventEmitter<number> = new EventEmitter(false);
+    @Output() public valueChange:EventEmitter<number> = new EventEmitter<number>(false);
 
     private _hoveredIndex:number = -1;
     private mouseover(i:number) {

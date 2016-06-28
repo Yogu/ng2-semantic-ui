@@ -13,7 +13,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 export class Message {
     @Input() public dismissible:boolean = true;
 
-    @Output() public onDismiss:EventEmitter<Message> = new EventEmitter(false);
+    @Output() public onDismiss:EventEmitter<Message> = new EventEmitter<Message>(false);
 
     private dismissed:boolean = false;
 

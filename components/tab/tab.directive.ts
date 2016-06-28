@@ -28,7 +28,7 @@ export class Tab {
     private _stateObserver: Observer<Tab>;
 
     constructor() {
-        this.stateChanged$ = new Observable((observer:any) => this._stateObserver = observer);
+        this.stateChanged$ = new Observable<Tab>((observer:any) => this._stateObserver = observer);
     }
 
     private _isActive:boolean = false;
@@ -83,8 +83,8 @@ export class Tab {
         });
     }
 
-    @Output() public isActiveChange:EventEmitter<boolean> = new EventEmitter(false);
-    @Output() public onActivate:EventEmitter<Tab> = new EventEmitter(false);
+    @Output() public isActiveChange:EventEmitter<boolean> = new EventEmitter<boolean>(false);
+    @Output() public onActivate:EventEmitter<Tab> = new EventEmitter<Tab>(false);
 
     @HostListener('click')
     private click() {

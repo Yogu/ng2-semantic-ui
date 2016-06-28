@@ -27,7 +27,7 @@ export class AccordionPanel implements OnInit, OnDestroy {
     public get isOpen():boolean {
         return this._isOpen;
     }
-    @Output() public isOpenChange:EventEmitter<boolean> = new EventEmitter(false);
+    @Output() public isOpenChange:EventEmitter<boolean> = new EventEmitter<boolean>(false);
 
     public set isOpen(value:boolean) {
         this._isOpen = value;
